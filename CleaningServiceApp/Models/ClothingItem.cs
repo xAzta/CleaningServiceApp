@@ -13,5 +13,18 @@ namespace CleaningServiceApp.Models
         public string Material { get; set; } // Anyag (pl. pamut, gyapjú)
         public bool IsCleaned { get; set; } // Tisztítás állapota
         public decimal Price { get; set; } // Tisztítás díja
+
+        public override string ToString()
+        {
+            return $"{ItemID},{Type},{Material},{IsCleaned},{Price}";
+        }
+        public ClothingItem(string itemId, string type, string material, bool isCleaned, decimal price)
+        {
+            ItemID = itemId;
+            Type = type;
+            Material = material;
+            IsCleaned = isCleaned;
+            Price = price;
+        }
     }
 }
